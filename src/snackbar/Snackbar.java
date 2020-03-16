@@ -16,6 +16,8 @@ public class Snackbar {
       Snack soda = new Snack("Soda", drink, 2.50, 24);
       Snack water = new Snack("Water", drink, 2.75, 20);
 
+      Snack[] snacks = { chips, chocolateBar, pretzel, soda, water };
+
       System.out.println("\nJane has $" + Jane.getCash() + " on hand.");
       System.out.println("There is/are " + soda.getQuantity() + " soda/s in the vending machine.\n");
 
@@ -25,5 +27,10 @@ public class Snackbar {
       System.out.println("Jane bought 3 sodas, and has $" + Jane.getCash() + " left.");
       System.out.println("There is/are now " + soda.getQuantity() + " soda/s left in the vending machine.\n");
 
+      System.out.println("These are all the snacks in our vending machines:\n");
+      for (Snack snack : snacks) {
+         System.out.println(snack.getName() + " | quantity: " + snack.getQuantity() + " | vending location: "
+               + snack.getVendingMachine().getName());
+      }
    }
 }

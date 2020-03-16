@@ -67,7 +67,7 @@ public class Snack {
    /**
     * @return the vendingMachine
     */
-   public String getVendingMachine() {
+   public VendingMachine getVendingMachine() {
       return vendingMachine;
    }
 
