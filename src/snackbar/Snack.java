@@ -5,8 +5,16 @@ public class Snack {
    private String name;
    private String vendingMachineID;
 
-   private int cost;
+   private double cost;
    private int quantity = 0;
+
+   public Snack(String name, String id, String vendingMachineID, int cost, int quantity) {
+      this.name = name;
+      this.id = id;
+      this.vendingMachineID = vendingMachineID;
+      this.cost = cost;
+      this.quantity = quantity;
+   }
 
    /**
     * @param id the id to set
@@ -39,11 +47,11 @@ public class Snack {
    /**
     * @param cost the cost to set
     */
-   public void setCost(int cost) {
+   public void setCost(double cost) {
       this.cost = cost;
    }
 
-   public int getCost() {
+   public double getCost() {
       return this.cost;
    }
 
@@ -79,7 +87,7 @@ public class Snack {
       this.quantity -= quantity;
    }
 
-   public int getCost(int quantity) {
+   public double getCost(int quantity) {
       return quantity * this.cost;
    }
 

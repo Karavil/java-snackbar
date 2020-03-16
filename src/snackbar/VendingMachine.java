@@ -4,6 +4,11 @@ public class VendingMachine {
    private String id;
    private String name;
 
+   public VendingMachine(String name, String id) {
+      this.name = name;
+      this.id = id;
+   }
+
    /**
     * @return the id
     */
