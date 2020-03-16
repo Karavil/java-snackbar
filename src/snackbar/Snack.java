@@ -21,14 +21,14 @@ public class Snack {
    /**
     * @param id the id to set
     */
-   public void setId(String id) {
+   public void setId(int id) {
       this.id = id;
    }
 
    /**
     * @return the id
     */
-   public String getId() {
+   public int getId() {
       return id;
    }
 
@@ -60,7 +60,7 @@ public class Snack {
    /**
     * @param vendingMachine the vendingMachine to set
     */
-   public void setVendingMachine(String vendingMachine) {
+   public void setVendingMachine(VendingMachine vendingMachine) {
       this.vendingMachine = vendingMachine;
    }
 
