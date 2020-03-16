@@ -1,13 +1,14 @@
 package snackbar;
 
 public class Customer {
-   private String id;
+   private static int counter = 0;
+   private int id;
    private String name;
 
    private double dollars = 0.0;
 
-   public Customer(String name, String id, double startingCash) {
-      this.id = id;
+   public Customer(String name, double startingCash) {
+      this.id = counter++;
       this.name = name;
       this.dollars = startingCash;
    }
@@ -26,6 +27,15 @@ public class Customer {
     */
    public void addCash(double dollars) {
       this.dollars += dollars;
+   }
+
+   /**
+    * Remove money (dollars) from Customer object
+    * 
+    * @param dollars
+    */
+   public void removeCash(double dollars) {
+      this.dollars -= dollars;
    }
 
    /**

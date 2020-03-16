@@ -1,17 +1,19 @@
 package snackbar;
 
 public class Snack {
-   private String id;
+   private static int counter = 0;
+
+   private int id;
    private String name;
-   private String vendingMachineID;
+   private VendingMachine vendingMachine;
 
    private double cost;
    private int quantity = 0;
 
-   public Snack(String name, String id, String vendingMachineID, int cost, int quantity) {
+   public Snack(String name, VendingMachine snackLocation, double cost, int quantity) {
       this.name = name;
-      this.id = id;
-      this.vendingMachineID = vendingMachineID;
+      this.id = counter++;
+      this.vendingMachine = snackLocation;
       this.cost = cost;
       this.quantity = quantity;
    }
@@ -56,24 +58,31 @@ public class Snack {
    }
 
    /**
-    * @param vendingMachineID the vendingMachineID to set
+    * @param vendingMachine the vendingMachine to set
     */
-   public void setVendingMachineID(String vendingMachineID) {
-      this.vendingMachineID = vendingMachineID;
+   public void setVendingMachine(String vendingMachine) {
+      this.vendingMachine = vendingMachine;
    }
 
    /**
-    * @return the vendingMachineID
+    * @return the vendingMachine
     */
-   public String getVendingMachineID() {
-      return vendingMachineID;
+   public String getVendingMachine() {
+      return vendingMachine;
    }
 
    /**
-    * @param quantity the quantity to set
+    * @param quantity the quantity to add
     */
    public void addQuantity(int quantity) {
       this.quantity += quantity;
+   }
+
+   /**
+    * @param quantity the quantity to remove
+    */
+   public void removeQuantity(int quantity) {
+      this.quantity -= quantity;
    }
 
    /**
